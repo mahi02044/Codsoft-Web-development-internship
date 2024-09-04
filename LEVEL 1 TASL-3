@@ -1,0 +1,161 @@
+********HTML CODE********
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Calculator</title>
+    <link rel="stylesheet" href="styles3.css">
+</head>
+<body>
+    <div class="calculator">
+        <div class="display" id="display"></div>
+        <div class="buttons">
+            <button class="btn" onclick="clearDisplay()">C</button>
+            <button class="btn" onclick="appendNumber('7')">7</button>
+            <button class="btn" onclick="appendNumber('8')">8</button>
+            <button class="btn" onclick="appendNumber('9')">9</button>
+            <button class="btn" onclick="setOperation('/')">/</button>
+            <button class="btn" onclick="appendNumber('4')">4</button>
+            <button class="btn" onclick="appendNumber('5')">5</button>
+            <button class="btn" onclick="appendNumber('6')">6</button>
+            <button class="btn" onclick="setOperation('*')">*</button>
+            <button class="btn" onclick="appendNumber('1')">1</button>
+            <button class="btn" onclick="appendNumber('2')">2</button>
+            <button class="btn" onclick="appendNumber('3')">3</button>
+            <button class="btn" onclick="setOperation('^2')">^2</button>
+            <button class="btn" onclick="appendNumber('.')">.</button>
+            <button class="btn" onclick="calculate()">=</button>
+            <button class="btn" onclick="appendNumber('0')">0</button>
+            <button class="btn" onclick="setOperation('-')">-</button>
+            <button class="btn" onclick="setOperation('+')">+</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+********CSS CODE********
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.calculator {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 10px;
+    width: 400px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(237, 66, 66, 0.1);
+}
+
+.display {
+    background-color: #108d6e;
+    color: #fff;
+    font-size: 2em;
+    padding: 30px;
+    text-align: right;
+    border-radius: 10px 10px 0 0;
+    height: 80px;
+    overflow: hidden;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+}
+
+.btn {
+    background-color: #f0d2aa;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.5em;
+    padding: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #d0d0d0;
+}
+
+.btn:active {
+    background-color: #b0b0b0;
+}
+
+********JAVASCIPT CODE********
+let currentInput = '';
+let operation = null;
+let previousInput = '';
+
+function appendNumber(number) {
+    currentInput += number;
+    updateDisplay();
+}
+
+function setOperation(op) {
+    if (currentInput === '') return;
+    if (previousInput !== '') {
+        calculate();
+    }
+    operation = op;
+    previousInput = currentInput;
+    currentInput = '';
+}
+
+function clearDisplay() {
+    currentInput = '';
+    previousInput = '';
+    operation = null;
+    updateDisplay();
+}
+
+function calculate() {
+    if (operation === null || currentInput === '' || previousInput === '') return;
+    
+    const prev = parseFloat(previousInput);
+    const current = parseFloat(currentInput);
+    
+    let result;
+    switch (operation) {
+        case '+':
+            result = prev + current;
+            break;
+        case '^2':
+            result = prev * prev;
+             break;
+        case '-':
+            result = prev - current;
+            break;
+        case '*':
+            result = prev * current;
+            break;
+        case '/':
+            if (current === 0) {
+                alert("Cannot divide by zero");
+                clearDisplay();
+                return;
+            }
+            result = prev / current;
+            break;
+        default:
+            return;
+    }
+    
+    currentInput = result.toString();
+    operation = null;
+    previousInput = '';
+    updateDisplay();
+}
+
+function updateDisplay() {
+    document.getElementById('display').innerText = currentInput;
+}
