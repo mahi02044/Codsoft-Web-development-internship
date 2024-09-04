@@ -1,0 +1,214 @@
+********HTML FILE********
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Hello,I'm Mahi Patel</h1>
+            </div>
+            <p class="tagline">Web developer</p>
+        </div>
+    </header>
+    
+    <section id="about">
+        <div class="container">
+            <div class="flex-container">
+                <img src="D:\Level 1 Task-1\myohoto.jpeg" alt="Centered Image" class="centered-image" width="300"
+                height="300">
+            </div>
+            <h2>About Me</h2>
+            <p>Dynamic web developer with 6 months of experience in creating responsive 
+                and user-friendly websites.
+                Proven expertise in HTML, CSS, and JavaScript, with a strong 
+                 ability to solve  complex problems and deliver high-quality results.
+            </p>
+        </div>
+    </section>
+    
+    <section id="skills">
+        <div class="container">
+            <h2>Technical Skills</h2>
+            <ul>
+                <li>HTML & CSS</li>
+                <li>JavaScript</li>
+                <li>Responsive Design</li>
+                <li>Web Performance</li>
+            </ul>
+
+            <h2>Soft Skills</h2>
+            <ul>
+                <li>Leadership</li>
+                <li>Effective communicator</li>
+                <li>Team work</li>
+                <li>Strong Ananlytical Skills</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="portfolio" id="portfolio">
+        <div class="portfolio-heading">
+            <h1 class="my-heading text-center">Featured Portfolio</h1>
+        </div>
+        <div class="portfolio-content">
+            <div class="my-row">
+                <div class="my-col">
+                    <div class="my-card port-card">
+                        
+                        <h3 class="greet-heading blue-text">Web Design</h3>
+                        <div class="image">
+                            <img src="D:\Level 1 Task-1\webdesign.jpeg" 
+                                 alt="Web Design Image" width="200" height="200">
+                        </div>
+                    </div>
+                </div>
+            
+            <div class="my-row">
+                <div class="my-col">
+                    <div class="my-card port-card">
+                        
+                        <h3 class="greet-heading blue-text">
+                              Content Writing
+                          </h3>
+                          <div class="image">
+                            <img src="D:\Level 1 Task-1\content.jpeg" 
+                                 alt="Content Writting Image" width="200" height="200">
+                        </div>
+                    </div>
+                </div>
+                <div class="my-col">
+                    <div class="my-card port-card">
+                        
+                        <h3 class="greet-heading blue-text">
+                              Video Editing
+                          </h3>
+                          <div class="image">
+                            <img src="D:\Level 1 Task-1\video.jpeg" 
+                                 alt="Video Editing Image" width="200" height="200">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="resume">
+        <div class="container">
+            <h2>Resume</h2>
+            <p><a href="resume.pdf" download>My Resume</a></p>
+        </div>
+    </section>
+    
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <p>Email: mahiiii556l@example.com</p>
+            <p>Phone:+91 78456-7890</p>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 My Name. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
+
+
+********CSS FILE********
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #111010;
+}
+
+header {
+    background: #2e3801;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header .logo h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+header .tagline {
+    margin: 0;
+    font-style: italic;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    place-items: center;
+}
+
+section {
+    padding: 20px 0;
+}
+
+
+h2 {
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    background: #f4f4f4;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.project {
+    margin-bottom: 20px;
+}
+
+.project img {
+    width: 100%;
+    height: auto;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; 
+}
+
+.portfolio-heading{
+    background-color: rgb(75, 176, 176);
+    color: #111111;
+    text-align: center;
+}
+
+.portfolio-content{
+    text-decoration: wavy;
+}
