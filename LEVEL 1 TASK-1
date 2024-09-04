@@ -1,0 +1,248 @@
+***********HTML FILE************
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container" style="background-image: url(D:\desktop-tutorial\task.jpeg);">
+                <h1 style="text-align: center;"><b>Your Fitness Partner</b></h1>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                    <li><a href="services.html">Services</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>Welcome to Fitness Point</h1>
+            <img src="D:\Level 1 Task-1\image.jpeg" width="600" height="200" >
+                <br>
+            <p>Your one-stop solution for health and fitness.
+                Greetings to all the People out there!We welcome you to the platform where we
+                consistently strive to offer the best fitness ideas to our customers.
+                Thank you for choosing 
+                and supporting us! Discover more below.</p>
+            <a href="#features" class="cta-button">Learn More</a>
+        </div>
+    </section>
+
+    <section id="features" class="features" style="background-image: none;">
+        <div class="container">
+            <p><h2>Features</h2></p>
+            <div class="feature">
+                <h3>Feature 1</h3>
+                <p>online training platform to stay equipped.
+                    Join million people around the globe who are experincing better 
+                   opportunities to make there body fit and health.
+
+                </p>
+            </div>
+            <div class="feature">
+                <h3>Feature 2</h3>
+                <p>Experience with highly-qualified traineers.
+                    Fitness trackers to track your progress.
+                    Provides a weekly report to show how far you are from your goal.
+                    Community-based features allow you to compete with friends and family
+
+                </p>
+            </div>
+            <div class="feature">
+                <h3>Feature 3</h3>
+                <p> Flexible membership plans at best price and adjustable timings
+                    as per your convince.
+                      Use sensors in smartphones or wearable devices to collect data 
+                      on physical activity, heart rate, and other metrics.
+                </p>
+            </div>
+        </div>
+    </section><br>
+
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="service">
+                <h3>Personal Training</h3>
+                <p>Customized workout plans tailored to your goals.</p>
+            </div>
+            <div class="service">
+                <h3>Group Classes</h3>
+                <p>Join our community in various group fitness classes.</p>
+            </div>
+            <div class="service">
+                <h3>Nutrition Coaching</h3>
+                <p>Get expert advice on nutrition to complement your fitness routine.</p>
+            </div>
+        </div>
+    </section><br>
+    <br>
+
+
+    <section id="reviews" >
+        <div class="container">
+            <h2>What Our Clients Say</h2>
+            <div class="review">
+                <p>"FitLife has transformed my fitness journey! The personal training sessions are top-notch and the support is incredible."</p>
+                <cite>- Priya Chopra</cite>
+            </div>
+            <div class="review">
+                <p>"The group classes at FitLife are both fun and challenging. I've never felt better!"</p>
+                <cite>- Smith Agrawal</cite>
+            </div>
+            <div class="review">
+                <p>"The nutrition coaching helped me balance my diet and achieve my fitness goals. Highly recommend!"</p>
+                <cite>- Jazzy Khan</cite>
+            </div>
+        </div>
+    </section><br><br>
+    
+    <section id="contact" class="con">
+        <div class="container" style="text-align:center ;" >
+            <h3 >Contact us</h3>
+            <i>yourfitnesspartner@gmail.com</i><br>
+            <i>+91 6502335600</i><br>
+            <i>write to support</i>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 MySite. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
+
+**************CSS FILE***************
+body, h1, h2, h3, p, ul {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Header styles */
+header {
+    background: #7ee2f9;
+    color: #0e0000;
+    padding: 1rem 0;
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    background-image: url(D:\desktop-tutorial\task.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+nav h1 {
+    font-size: 1.8rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Hero section styles */
+.hero {
+    background: #e4e7da;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    background: #007bff;
+    color: #ffffff;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.cta-button:hover {
+    background: #0056b3;
+}
+
+/* Features section styles */
+.features {
+    scroll-padding: 89;
+}
+
+.features .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.feature {
+    background: #e4bfbf;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 2rem;
+    flex: 1;
+    margin: 1rem;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.feature h3 {
+    margin-bottom: 1rem;
+}
+
+/* Footer styles */
+footer {
+    background: #333;
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+.services{
+    background: #d3f7cd;
+    text-align: center;
+}
